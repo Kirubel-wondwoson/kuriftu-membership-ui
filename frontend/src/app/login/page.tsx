@@ -31,7 +31,7 @@ export default function LoginPage() {
         <div className="mx-auto w-full max-w-sm">
           <div className="flex items-center gap-2 mb-8">
             <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
-            <span className="text-xl font-serif font-semibold text-primary">Kuriftu Resort</span>
+          
           </div>
           <div className="space-y-2 mb-8">
             <h1 className="text-3xl font-bold">Sign In</h1>
