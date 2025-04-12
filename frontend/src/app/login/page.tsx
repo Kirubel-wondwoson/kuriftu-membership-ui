@@ -9,7 +9,6 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { toast } from "sonner"
 import Cookies from "js-cookie"
-import type { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"

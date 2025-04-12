@@ -2,7 +2,7 @@
 
 import type React from "react"
 import Link from "next/link"
-import { Award, CreditCard, Gift, History, Home, Hotel, Settings, Star, User } from "lucide-react"
+import { Award, CreditCard, History, Home, Hotel, Settings, Star} from "lucide-react"
 import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"

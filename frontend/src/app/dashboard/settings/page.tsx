@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, MapPin, Phone, User, Bell, Lock, Shield, CreditCard } from "lucide-react"
+import { User, Bell, Shield, CreditCard } from "lucide-react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -91,12 +91,13 @@ export default function SettingsPage() {
     },
   })
 
-  const handleProfileSubmit = async (data: ProfileFormData) => {
+  const handleProfileSubmit = async () => {
     try {
       setIsLoading(true)
       // TODO: Add API call to update profile
       toast.success("Profile updated successfully!")
     } catch (error) {
+      console.error(error)
       toast.error("Failed to update profile")
     } finally {
       setIsLoading(false)
