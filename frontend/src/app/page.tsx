@@ -13,7 +13,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
+            <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
             <span className="text-xl font-serif font-semibold text-primary">Kuriftu Resort</span>
           </div>
           <nav className="hidden md:flex gap-6">
@@ -46,7 +46,7 @@ export default function Home() {
         <section className="relative">
           <div className="absolute inset-0 bg-black/40 z-10" />
           <Image
-            src="/kuriftu-resort-1.jpg"
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             alt="Kuriftu Resort"
             width={1920}
             height={1080}
@@ -302,7 +302,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/logo.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
+                <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
                 <span className="text-xl font-serif font-semibold text-primary-foreground">Kuriftu Resort</span>
               </div>
               <p className="text-white/70">
