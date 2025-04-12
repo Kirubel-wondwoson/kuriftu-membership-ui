@@ -41,12 +41,12 @@ export function DashboardNav() {
           title="Dashboard"
           isActive={pathname === "/dashboard"}
         />
-        <NavItem
+        {/* <NavItem
           href="/dashboard/profile"
           icon={<User className="h-5 w-5" />}
           title="My Profile"
           isActive={pathname === "/dashboard/profile"}
-        />
+        /> */}
         <NavItem
           href="/dashboard/bookings"
           icon={<Hotel className="h-5 w-5" />}
@@ -54,10 +54,10 @@ export function DashboardNav() {
           isActive={pathname === "/dashboard/bookings"}
         />
         <NavItem
-          href="/dashboard/points"
+          href="/dashboard/points-rewards"
           icon={<Star className="h-5 w-5" />}
           title="Points & Rewards"
-          isActive={pathname === "/dashboard/points"}
+          isActive={pathname === "/dashboard/points-rewards"}
         />
         <NavItem
           href="/dashboard/membership"
@@ -76,12 +76,6 @@ export function DashboardNav() {
           icon={<CreditCard className="h-5 w-5" />}
           title="Payment Methods"
           isActive={pathname === "/dashboard/payments"}
-        />
-        <NavItem
-          href="/dashboard/rewards"
-          icon={<Gift className="h-5 w-5" />}
-          title="Redeem Rewards"
-          isActive={pathname === "/dashboard/rewards"}
         />
         <NavItem
           href="/dashboard/settings"

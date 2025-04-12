@@ -1,5 +1,14 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+import { toast } from "sonner"
+import Cookies from "js-cookie"
 import type { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
@@ -7,12 +16,74 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 
-export const metadata: Metadata = {
-  title: "Login | Kuriftu Resort",
-  description: "Login to your Kuriftu Resort membership account",
-}
+const formSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  password: z.string().min(1, "Password is required"),
+  remember: z.boolean().default(false),
+})
+
+type FormData = z.infer<typeof formSchema>
+
+// export const metadata: Metadata = {
+//   title: "Login | Kuriftu Resort",
+//   description: "Login to your Kuriftu Resort membership account",
+// }
 
 export default function LoginPage() {
+  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false)
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+    watch,
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      remember: false,
+    },
+  })
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      setIsLoading(true)
+      const response = await fetch("https://kuriftu-membership-backend-3.onrender.com/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.message || "Login failed")
+      }
+
+      // Store token in cookies
+      if (data.remember) {
+        // Set cookie to expire in 7 days
+        Cookies.set("auth_token", result.token, { expires: 7 })
+      } else {
+        // Set session cookie (expires when browser closes)
+        Cookies.set("auth_token", result.token)
+      }
+
+      toast.success("Login successful!")
+      router.push("/dashboard")
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Login failed")
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <div className="min-h-screen grid md:grid-cols-2">
       <div className="hidden md:block relative">
@@ -31,16 +102,24 @@ export default function LoginPage() {
         <div className="mx-auto w-full max-w-sm">
           <div className="flex items-center gap-2 mb-8">
             <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
-          
           </div>
           <div className="space-y-2 mb-8">
             <h1 className="text-3xl font-bold">Sign In</h1>
             <p className="text-muted-foreground">Enter your credentials to access your account</p>
           </div>
-          <div className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="name@example.com" />
+              <Input
+                id="email"
+                type="email"
+                placeholder="name@example.com"
+                {...register("email")}
+                className={errors.email ? "border-destructive" : ""}
+              />
+              {errors.email && (
+                <p className="text-sm text-destructive">{errors.email.message}</p>
+              )}
             </div>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -49,16 +128,28 @@ export default function LoginPage() {
                   Forgot password?
                 </Link>
               </div>
-              <Input id="password" type="password" />
+              <Input
+                id="password"
+                type="password"
+                {...register("password")}
+                className={errors.password ? "border-destructive" : ""}
+              />
+              {errors.password && (
+                <p className="text-sm text-destructive">{errors.password.message}</p>
+              )}
             </div>
             <div className="flex items-center space-x-2">
-              <Checkbox id="remember" />
+              <Checkbox
+                id="remember"
+                checked={watch("remember")}
+                onCheckedChange={(checked) => setValue("remember", checked as boolean)}
+              />
               <Label htmlFor="remember" className="text-sm font-normal">
                 Remember me
               </Label>
             </div>
-            <Button className="w-full" asChild>
-              <Link href="/dashboard">Sign In</Link>
+            <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? "Signing in..." : "Sign In"}
             </Button>
             <div className="text-center text-sm">
               Don&apos;t have an account?{" "}
@@ -66,7 +157,7 @@ export default function LoginPage() {
                 Sign up
               </Link>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

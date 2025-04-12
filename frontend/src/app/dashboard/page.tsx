@@ -28,7 +28,7 @@ export default function DashboardPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             <Card className="bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200 dark:from-amber-950 dark:to-amber-900 dark:border-amber-800">
               <CardHeader className="pb-2">
                 <CardTitle className="text-amber-900 dark:text-amber-100">Total Points</CardTitle>
@@ -65,7 +65,7 @@ export default function DashboardPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-200 dark:from-emerald-950 dark:to-emerald-900 dark:border-emerald-800">
+            {/* <Card className="bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-200 dark:from-emerald-950 dark:to-emerald-900 dark:border-emerald-800">
               <CardHeader className="pb-2">
                 <CardTitle className="text-emerald-900 dark:text-emerald-100">Next Reward</CardTitle>
                 <CardDescription>Points needed for next reward</CardDescription>
@@ -85,7 +85,7 @@ export default function DashboardPage() {
                   </Progress>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
