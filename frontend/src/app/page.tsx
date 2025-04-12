@@ -68,38 +68,40 @@ export default function Home() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative">
-          <div className="absolute inset-0 bg-black/40 z-10" />
-          <Image
-            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
-            alt="Kuriftu Resort"
-            width={1920}
-            height={1080}
-            className="w-full h-[600px] object-cover"
-            priority
-          />
-          <div className="container relative z-20 flex flex-col items-center justify-center h-[600px] text-center text-white">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold max-w-4xl leading-tight">
-              Experience Exclusive Privileges with Kuriftu Membership
-            </h1>
-            <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90">
-              Join our prestigious membership program and unlock a world of
-              luxury, personalized service, and exceptional benefits.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white"
-              >
-                Explore Membership
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/20"
-              >
-                Book a Stay
-              </Button>
+        <section className="relative h-[600px] w-full">
+          <div className="absolute inset-0">
+            <Image
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+              alt="Kuriftu Resort"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+          <div className="container relative h-full flex items-center">
+            <div className="max-w-2xl space-y-6 text-white">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Experience Exclusive Privileges with Kuriftu Membership
+              </h1>
+              <p className="text-lg md:text-xl text-white/90">
+                Join our prestigious membership program and unlock a world of luxury, personalized service, and exceptional benefits.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white hover:cursor-pointer"
+                >
+                  Explore Membership
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-black hover:cursor-pointer"
+                >
+                  Book a Stay
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -280,7 +282,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-amber-200 text-white">
+        <section className="py-20 bg-primary text-white">
           <div className="container  text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
               Ready to Elevate Your Experience?
