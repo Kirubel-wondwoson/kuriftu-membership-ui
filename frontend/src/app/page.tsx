@@ -14,7 +14,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
-            
+        
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
@@ -155,37 +155,37 @@ export default function Home() {
                 icon="hotel"
                 title="Preferential Room Rates"
                 description="Enjoy significant discounts on our luxurious accommodations with every stay."
-                image="/kuriftu-resort-2.jpg"
+                image="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
               />
               <BenefitItem
                 icon="utensils"
                 title="Dining Privileges"
                 description="Special discounts and priority reservations at our award-winning restaurants."
-                image="/kuriftu-dining.jpg"
+                image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
               />
               <BenefitItem
                 icon="spa"
                 title="Spa Treatments"
                 description="Complimentary and discounted wellness and spa services to rejuvenate your body and mind."
-                image="/kuriftu-spa.jpg"
+                image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
               />
               <BenefitItem
                 icon="gift"
                 title="Welcome Amenities"
                 description="Personalized welcome gifts and in-room amenities tailored to your preferences."
-                image="/kuriftu-resort-3.jpg"
+                image="https://images.unsplash.com/photo-1601614844724-f9b5f1181f86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
               />
               <BenefitItem
                 icon="calendar"
                 title="Exclusive Events"
                 description="Access to member-only events, activities, and experiences throughout the year."
-                image="/kuriftu-pool.jpg"
+                image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
               />
               <BenefitItem
                 icon="star"
                 title="Loyalty Points"
                 description="Earn points with every stay and redeem them for free nights, upgrades, and more."
-                image="/kuriftu-resort-1.jpg"
+                image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
               />
             </div>
           </div>
@@ -219,19 +219,19 @@ export default function Home() {
               <TestimonialCard
                 name="Sarah Johnson"
                 tier="Diamond Member"
-                image="/testimonial-1.jpg"
+                image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                 quote="The Diamond membership has transformed our family vacations. The personalized service and exclusive benefits make every stay truly special."
               />
               <TestimonialCard
                 name="Michael Chen"
                 tier="Platinum Member"
-                image="/testimonial-2.jpg"
+                image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                 quote="As a business traveler, the Platinum membership offers incredible value. The guaranteed late checkout and dedicated concierge have been game-changers."
               />
               <TestimonialCard
                 name="Amara Okafor"
                 tier="Golden Member"
-                image="/testimonial-3.jpg"
+                image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                 quote="Even at the Golden tier, the benefits are substantial. The discounts alone have paid for my membership several times over."
               />
             </div>
@@ -239,8 +239,8 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gold-gradient text-white">
-          <div className="container text-center">
+        <section className="py-20 bg-amber-200 text-white">
+          <div className="container  text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Ready to Elevate Your Experience?</h2>
             <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
               Join our exclusive membership program today and start enjoying premium benefits on your very next stay.
@@ -302,7 +302,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
+                <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary-foreground font-serif font-bold">
+                  KR
+                </div>
                 <span className="text-xl font-serif font-semibold text-primary-foreground">Kuriftu Resort</span>
               </div>
               <p className="text-white/70">

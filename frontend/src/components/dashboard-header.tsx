@@ -23,13 +23,13 @@ export function DashboardHeader() {
             <SheetContent side="left" className="w-[240px] sm:w-[300px]">
               <div className="flex items-center gap-2 pt-4 pb-8">
                 <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
-                
+                <span className="text-xl font-serif font-semibold text-primary">Kuriftu Resort</span>
               </div>
               <DashboardNav />
             </SheetContent>
           </Sheet>
           <Link href="/dashboard" className="flex items-center gap-2">
-            <Image src="https://www.kurifturesorts.com/_nuxt/img/logo.e2cce34.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
+            <Image src="/logo.svg" alt="Kuriftu Resort Logo" width={40} height={40} className="h-10 w-auto" />
             <span className="text-xl font-serif font-semibold hidden md:inline-block text-primary">Kuriftu Resort</span>
           </Link>
         </div>
