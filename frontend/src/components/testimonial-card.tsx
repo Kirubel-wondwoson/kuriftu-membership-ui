@@ -23,7 +23,7 @@ export function TestimonialCard({ name, tier, image, quote }: TestimonialCardPro
           <p className="text-sm text-muted-foreground">{tier}</p>
         </div>
       </div>
-      <blockquote className="text-muted-foreground italic">"{quote}"</blockquote>
+      <blockquote className="text-muted-foreground italic">&quot;{quote}&quot;</blockquote>
     </div>
   )
 }

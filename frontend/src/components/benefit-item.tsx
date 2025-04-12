@@ -4,6 +4,7 @@ interface BenefitItemProps {
   icon: "hotel" | "utensils" | "spa" | "gift" | "calendar" | "star"
   title: string
   description: string
+  image: string
 }
 
 export function BenefitItem({ icon, title, description }: BenefitItemProps) {
