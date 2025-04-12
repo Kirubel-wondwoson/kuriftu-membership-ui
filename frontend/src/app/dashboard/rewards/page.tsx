@@ -67,7 +67,7 @@ export default function RewardsPage() {
             <TabsContent value="all" className="mt-6">
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <RewardCard
-                  image="/spa-product.jpg"
+                  image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=8"
                   title="Luxury Spa Package"
                   description="90-minute signature massage with aromatherapy and facial treatment."
                   pointsRequired="5,000"
@@ -75,7 +75,7 @@ export default function RewardsPage() {
                   category="experiences"
                 />
                 <RewardCard
-                  image="/dining-product.jpg"
+                  image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Fine Dining Experience"
                   description="5-course tasting menu with wine pairing for two at our signature restaurant."
                   pointsRequired="7,500"
@@ -83,7 +83,7 @@ export default function RewardsPage() {
                   category="experiences"
                 />
                 <RewardCard
-                  image="/excursion-product.jpg"
+                  image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Private Lake Excursion"
                   description="3-hour private boat tour of Lake Bishoftu with champagne and snacks."
                   pointsRequired="10,000"
@@ -91,7 +91,7 @@ export default function RewardsPage() {
                   category="experiences"
                 />
                 <RewardCard
-                  image="/room-product.jpg"
+                  image="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Free Night Stay"
                   description="One complimentary night in a Deluxe Room with breakfast included."
                   pointsRequired="15,000"
@@ -99,7 +99,7 @@ export default function RewardsPage() {
                   category="stays"
                 />
                 <RewardCard
-                  image="/merchandise-product.jpg"
+                  image="https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Kuriftu Luxury Bathrobe"
                   description="Premium cotton bathrobe with Kuriftu Resort logo embroidery."
                   pointsRequired="3,500"
@@ -107,7 +107,7 @@ export default function RewardsPage() {
                   category="merchandise"
                 />
                 <RewardCard
-                  image="/transfer-product.jpg"
+                  image="https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Airport Transfer"
                   description="Luxury vehicle airport transfer service (one-way) with refreshments."
                   pointsRequired="2,000"
@@ -119,7 +119,7 @@ export default function RewardsPage() {
             <TabsContent value="stays" className="mt-6">
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <RewardCard
-                  image="/room-product.jpg"
+                  image="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Free Night Stay"
                   description="One complimentary night in a Deluxe Room with breakfast included."
                   pointsRequired="15,000"
@@ -127,7 +127,7 @@ export default function RewardsPage() {
                   category="stays"
                 />
                 <RewardCard
-                  image="/suite-upgrade.jpg"
+                  image="https://images.unsplash.com/photo-1590073242678-70ee3fc28f8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Suite Upgrade"
                   description="Upgrade your existing reservation to a luxury suite."
                   pointsRequired="8,000"
@@ -135,7 +135,7 @@ export default function RewardsPage() {
                   category="stays"
                 />
                 <RewardCard
-                  image="/late-checkout.jpg"
+                  image="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Late Checkout"
                   description="Extend your checkout time until 4 PM on your departure day."
                   pointsRequired="2,500"
@@ -147,7 +147,7 @@ export default function RewardsPage() {
             <TabsContent value="experiences" className="mt-6">
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <RewardCard
-                  image="/spa-product.jpg"
+                  image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=8"
                   title="Luxury Spa Package"
                   description="90-minute signature massage with aromatherapy and facial treatment."
                   pointsRequired="5,000"
@@ -155,7 +155,7 @@ export default function RewardsPage() {
                   category="experiences"
                 />
                 <RewardCard
-                  image="/dining-product.jpg"
+                  image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Fine Dining Experience"
                   description="5-course tasting menu with wine pairing for two at our signature restaurant."
                   pointsRequired="7,500"
@@ -163,7 +163,7 @@ export default function RewardsPage() {
                   category="experiences"
                 />
                 <RewardCard
-                  image="/excursion-product.jpg"
+                  image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Private Lake Excursion"
                   description="3-hour private boat tour of Lake Bishoftu with champagne and snacks."
                   pointsRequired="10,000"

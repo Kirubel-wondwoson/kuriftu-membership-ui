@@ -152,7 +152,7 @@ export default function DashboardPage() {
             <TabsContent value="upcoming" className="mt-6">
               <div className="grid gap-6 md:grid-cols-2">
                 <ReservationCard
-                  image="/lakeside-villa.jpg"
+                  image="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Lakeside Villa"
                   dates="May 15 - May 18, 2025"
                   status="Confirmed"
@@ -160,7 +160,7 @@ export default function DashboardPage() {
                   amenities={["Lake View", "Private Pool", "Breakfast Included"]}
                 />
                 <ReservationCard
-                  image="/mountain-suite.jpg"
+                  image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Mountain View Suite"
                   dates="July 10 - July 15, 2025"
                   status="Pending"
@@ -192,14 +192,14 @@ export default function DashboardPage() {
             <TabsContent value="offers" className="mt-6">
               <div className="grid gap-6 md:grid-cols-2">
                 <OfferCard
-                  image="/spa-offer.jpg"
+                  image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Exclusive Spa Package"
                   description="Enjoy a complimentary 90-minute spa treatment when you book a 3-night stay."
                   expiry="Valid until June 30, 2025"
                   discount="30% OFF"
                 />
                 <OfferCard
-                  image="/dining-offer.jpg"
+                  image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Fine Dining Experience"
                   description="Special tasting menu with wine pairing at our signature restaurant."
                   expiry="Valid until May 15, 2025"
