@@ -52,7 +52,7 @@ export default function BookingsPage() {
               <div className="grid gap-6">
                 <BookingCard
                   id="BK-78912345"
-                  image="/lakeside-villa.jpg"
+                  image="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Lakeside Villa"
                   location="Kuriftu Resort Bishoftu"
                   checkIn="May 15, 2025"
@@ -64,7 +64,7 @@ export default function BookingsPage() {
                 />
                 <BookingCard
                   id="BK-78912346"
-                  image="/mountain-suite.jpg"
+                  image="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Mountain View Suite"
                   location="Kuriftu Resort Entoto"
                   checkIn="July 10, 2025"
@@ -76,7 +76,7 @@ export default function BookingsPage() {
                 />
                 <BookingCard
                   id="BK-78912347"
-                  image="/garden-room.jpg"
+                  image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Garden Room"
                   location="Kuriftu Resort Bishoftu"
                   checkIn="August 22, 2025"
@@ -92,7 +92,7 @@ export default function BookingsPage() {
               <div className="grid gap-6">
                 <BookingCard
                   id="BK-78912340"
-                  image="/lakeside-villa.jpg"
+                  image="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Lakeside Villa"
                   location="Kuriftu Resort Bishoftu"
                   checkIn="February 10, 2025"
@@ -104,7 +104,7 @@ export default function BookingsPage() {
                 />
                 <BookingCard
                   id="BK-78912341"
-                  image="/garden-room.jpg"
+                  image="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Garden Room"
                   location="Kuriftu Resort Bishoftu"
                   checkIn="January 5, 2025"
@@ -116,7 +116,7 @@ export default function BookingsPage() {
                 />
                 <BookingCard
                   id="BK-78912342"
-                  image="/mountain-suite.jpg"
+                  image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Mountain View Suite"
                   location="Kuriftu Resort Entoto"
                   checkIn="December 20, 2024"
@@ -132,7 +132,7 @@ export default function BookingsPage() {
               <div className="grid gap-6">
                 <BookingCard
                   id="BK-78912343"
-                  image="/garden-room.jpg"
+                  image="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                   title="Garden Room"
                   location="Kuriftu Resort Bishoftu"
                   checkIn="March 15, 2025"
