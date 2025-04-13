@@ -1,5 +1,9 @@
-import { CreditCard, LogOut, Settings, User } from "lucide-react"
+'use client'
 
+import { LogOut, Settings } from "lucide-react"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import Cookies from "js-cookie"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,6 +16,15 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export function UserNav() {
+  const router = useRouter()
+
+  const handleLogout = () => {
+    // Remove the auth_token cookie
+    Cookies.remove("auth_token")
+    // Redirect to home page
+    router.push("/")
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -32,20 +45,14 @@ export function UserNav() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <User className="mr-2 h-4 w-4" />
-            <span>Profile</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <CreditCard className="mr-2 h-4 w-4" />
-            <span>Billing</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Settings className="mr-2 h-4 w-4" />
-            <span>Settings</span>
+            <Link href="/dashboard/settings" className="flex items-center gap-1">
+              <Settings className="mr-2 h-4 w-4" />
+              <span>Settings</span>
+            </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleLogout}>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>

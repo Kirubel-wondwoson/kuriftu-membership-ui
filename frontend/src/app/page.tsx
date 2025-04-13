@@ -1,13 +1,17 @@
+'use client'
 import Link from "next/link";
 import Image from "next/image";
+
 
 import { Button } from "@/components/ui/button";
 import { MembershipTier } from "@/components/membership-tier";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { BenefitItem } from "@/components/benefit-item";
 import { MembershipComparison } from "@/components/membership-comparison";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="flex min-h-screen flex-col font-sans">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -60,15 +64,17 @@ export default function Home() {
             >
               Login
             </Link>
+            <Link href="/register">
             <Button className="bg-primary hover:bg-primary/90 text-white">
               Join Now
             </Button>
+            </Link>
           </div>
         </div>
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[600px] w-full">
+        <section className="relative h-[800px] w-full">
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
@@ -89,6 +95,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
+                  onClick={() => router.push("#membership")}
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-white hover:cursor-pointer"
                 >
