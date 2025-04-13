@@ -2,6 +2,7 @@
 // Replace the base URL with your actual backend URL
 const API_BASE_URL = "https://kuriftu-membership-backend-3.onrender.com/api";
 
+
 // Types for API responses
 export interface User {
   id: string;
@@ -135,7 +136,6 @@ export async function register(userData: {
     if (!response.ok) {
       throw new Error("Registration failed");
     }
-
     return await response.json();
   } catch (error) {
     console.error("Registration error:", error);
