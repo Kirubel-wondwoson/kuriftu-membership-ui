@@ -2,7 +2,7 @@
 
 import type React from "react"
 import Link from "next/link"
-import { Award, CreditCard, History, Home, Hotel, Settings, Star} from "lucide-react"
+import { Award, CreditCard, History, Home, Hotel, Settings, ShoppingBag, Star} from "lucide-react"
 import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
@@ -47,6 +47,12 @@ export function DashboardNav() {
           title="My Profile"
           isActive={pathname === "/dashboard/profile"}
         /> */}
+        <NavItem
+          href="/dashboard/shop"
+          icon={<ShoppingBag className="h-5 w-5" />}
+          title="Shop & Earn"
+          isActive={pathname === "/dashboard/shop"}
+        />
         <NavItem
           href="/dashboard/bookings"
           icon={<Hotel className="h-5 w-5" />}

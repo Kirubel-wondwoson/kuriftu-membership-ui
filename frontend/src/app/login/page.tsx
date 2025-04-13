@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
+import { login } from "@/lib/api"
 
 const formSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -48,22 +49,7 @@ export default function LoginPage() {
   const onSubmit = async (data: FormData) => {
     try {
       setIsLoading(true)
-      const response = await fetch("https://kuriftu-membership-backend-3.onrender.com/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          password: data.password,
-        }),
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || "Login failed")
-      }
+      const result = await login(data.email, data.password);
 
       // Store token in cookies
       if (data.remember) {

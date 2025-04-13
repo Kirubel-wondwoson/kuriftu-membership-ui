@@ -107,20 +107,20 @@ export default function MembershipPage() {
             </CardFooter>
           </Card>
 
-          <Tabs defaultValue="benefits" className="w-full">
+          <Tabs defaultValue="upgrade" className="w-full">
             <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="upgrade">Upgrade Options</TabsTrigger>
               <TabsTrigger value="benefits">Benefits</TabsTrigger>
               <TabsTrigger value="history">Membership History</TabsTrigger>
-              <TabsTrigger value="upgrade">Upgrade Options</TabsTrigger>
             </TabsList>
+            <TabsContent value="upgrade" className="mt-6">
+              <MembershipUpgradeOptions />
+            </TabsContent>
             <TabsContent value="benefits" className="mt-6">
               <MembershipBenefits />
             </TabsContent>
             <TabsContent value="history" className="mt-6">
               <MembershipHistory />
-            </TabsContent>
-            <TabsContent value="upgrade" className="mt-6">
-              <MembershipUpgradeOptions />
             </TabsContent>
           </Tabs>
         </main>
