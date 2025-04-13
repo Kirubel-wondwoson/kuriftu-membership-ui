@@ -46,11 +46,13 @@ export default function SurveyPage() {
 
   const onSubmit = async (data: SurveyFormData) => {
     try {
+        console.log(data)
       setIsLoading(true)
       // TODO: Add API call to save survey responses
       toast.success("Thank you for completing the survey!")
       router.push("/login")
     } catch (error) {
+        console.error(error)
       toast.error("Failed to submit survey. Please try again.")
     } finally {
       setIsLoading(false)
@@ -86,7 +88,7 @@ export default function SurveyPage() {
               <div className="space-y-4">
                 <Label>What is your primary purpose for visiting Kuriftu?</Label>
                 <RadioGroup
-                  onValueChange={(value) => setValue("visitPurpose", value as any)}
+                  onValueChange={(value: "leisure" | "business" | "both") => setValue("visitPurpose", value)}
                   className="grid grid-cols-3 gap-4"
                 >
                   <div className="flex items-center space-x-2">
@@ -113,7 +115,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="villa"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("preferredAccommodation") || []
                         setValue(
                           "preferredAccommodation",
@@ -126,7 +128,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="suite"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("preferredAccommodation") || []
                         setValue(
                           "preferredAccommodation",
@@ -139,7 +141,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="room"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("preferredAccommodation") || []
                         setValue(
                           "preferredAccommodation",
@@ -152,7 +154,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="tent"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("preferredAccommodation") || []
                         setValue(
                           "preferredAccommodation",
@@ -174,7 +176,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="spa"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("interests") || []
                         setValue(
                           "interests",
@@ -187,7 +189,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="dining"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("interests") || []
                         setValue(
                           "interests",
@@ -200,7 +202,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="adventure"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("interests") || []
                         setValue(
                           "interests",
@@ -215,7 +217,7 @@ export default function SurveyPage() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="culture"
-                      onCheckedChange={(checked) => {
+                      onCheckedChange={(checked: boolean) => {
                         const current = watch("interests") || []
                         setValue(
                           "interests",
@@ -236,7 +238,7 @@ export default function SurveyPage() {
               <div className="space-y-4">
                 <Label>How often do you plan to visit Kuriftu?</Label>
                 <RadioGroup
-                  onValueChange={(value) => setValue("travelFrequency", value as any)}
+                  onValueChange={(value: "first-time" | "occasional" | "frequent") => setValue("travelFrequency", value)}
                   className="grid grid-cols-3 gap-4"
                 >
                   <div className="flex items-center space-x-2">

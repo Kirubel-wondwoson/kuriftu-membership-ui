@@ -55,7 +55,7 @@ export default function LoginPage() {
       if (data.remember) {
         // Set cookie to expire in 7 days
         Cookies.set("auth_token", result.token, { expires: 7 })
-        Cookies.set("user_id", result.user_id, { expires: 7 })
+        Cookies.set("user_id", result.user, { expires: 7 })
       } else {
         // Set session cookie (expires when browser closes)
         Cookies.set("auth_token", result.token)
