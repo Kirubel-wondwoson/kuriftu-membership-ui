@@ -77,8 +77,8 @@ export default function RegisterPage() {
         throw new Error(result.message || "Registration failed")
       }
 
-      toast.success("Registration successful! Please check your email for verification.")
-      router.push("/login")
+      toast.success("Registration successful! Please complete our quick survey.")
+      router.push("/survey")
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Registration failed")
     } finally {
