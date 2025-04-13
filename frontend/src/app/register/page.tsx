@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { toast } from "sonner"
+import { register as apiRegister } from "@/lib/api"
 
 const formSchema = z.object({
   fname: z.string().min(2, "First name must be at least 2 characters"),
@@ -57,25 +58,7 @@ export default function RegisterPage() {
   const onSubmit = async (data: FormData) => {
     try {
       setIsLoading(true)
-      const response = await fetch("https://kuriftu-membership-backend-3.onrender.com/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fname: data.fname,
-          lname: data.lname,
-          email: data.email,
-          phone: data.phone,
-          password: data.password,
-        }),
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || "Registration failed")
-      }
+      await apiRegister(data);
 
       toast.success("Registration successful! Please complete our quick survey.")
       router.push("/survey")
